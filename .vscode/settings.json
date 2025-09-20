@@ -1,0 +1,14 @@
+{
+	"C_Cpp.default.compilerPath": "/usr/bin/clang",
+	// 入力中の自動サジェストを無効化
+	"editor.quickSuggestions": {
+		"other": "off",
+		"comments": "off",
+		"strings": "off"
+	},
+	// トリガー文字入力時のサジェストを無効化
+	"editor.suggestOnTriggerCharacters": false,
+	"files.associations": {
+		"iostream": "cpp"
+	}
+}
