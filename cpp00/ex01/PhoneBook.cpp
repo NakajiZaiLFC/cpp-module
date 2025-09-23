@@ -133,10 +133,13 @@ void PhoneBook::handleSearchCommand(void)
 
 	try
 	{
-		displaySummaryList();
+		if (!displaySummaryList())
+			return ;
 		if (!std::getline(std::cin, input_index))
 			return;
-		search_index = std::stoi(input_index);
+		std::stringstream ss(input_index);
+		ss >> search_index;
+		// search_index = std::stoi(input_index);
 		if (!index_validation(search_index))
 		{
 			std::cout << INVALID_INDEX << std::endl;
@@ -150,12 +153,12 @@ void PhoneBook::handleSearchCommand(void)
 	}
 }
 
-void PhoneBook::displaySummaryList(void)
+bool PhoneBook::displaySummaryList(void)
 {
 	if (m_contactCount < 1)
 	{
 		std::cout << PHONEBOOK_IS_EMPTY << std::endl;
-		return;
+		return (false);
 	}
 	else if (m_contactCount < 8)
 	{
@@ -169,14 +172,17 @@ void PhoneBook::displaySummaryList(void)
 		for (int i = 0; i < 8; i++)
 			displayColumn((m_contactCount - 8 + i) % 8);
 	}
+	return (true);
 }
 
 void PhoneBook::displayHeader(void)
 {
+	std::cout << "==========================================="<< std::endl;
 	std::cout << std::right << std::setw(10) << "index" << "|";
 	std::cout << std::right << std::setw(10) << "first name" << "|";
 	std::cout << std::right << std::setw(10) << "last name" << "|";
 	std::cout << std::right << std::setw(10) << "nickname" << std::endl;
+	std::cout << "==========================================="<< std::endl;
 }
 
 void PhoneBook::displayColumn(int i)
@@ -213,12 +219,12 @@ bool PhoneBook::index_validation(int search_index)
 
 void PhoneBook::displayIndexRecord(int m_index)
 {
-	std::cout << std::endl;
+	std::cout << "==========================================="<< std::endl;
 	std::cout << std::left << std::setw(20) << FIRST_NAME << m_contacts[m_index].getFirstName() << std::endl;
 	std::cout << std::left << std::setw(20) << LAST_NAME << m_contacts[m_index].getLastName() << std::endl;
 	std::cout << std::left << std::setw(20) << NICKNAME << m_contacts[m_index].getNickname() << std::endl;
 	std::cout << std::left << std::setw(20) << PHONE_NUM << m_contacts[m_index].getPhoneNum() << std::endl;
 	std::cout << std::left << std::setw(20) << DARKSET_SECRET << m_contacts[m_index].getDarksetSecret() << std::endl;
-	std::cout << std::endl;
+	std::cout << "==========================================="<< std::endl;
 }
 

@@ -4,7 +4,7 @@ int main(void)
 {
 	PhoneBook phone_book;
 	std::string input_cmd;
-	std::cout << SAY_HI << std::endl;
+	std::cout << SAY_HI << SELECT_PROMPT << std::endl;
 	while (std::getline(std::cin, input_cmd))
 	{
 		if (input_cmd == "EXIT")
@@ -15,6 +15,7 @@ int main(void)
 			phone_book.handleSearchCommand();
 		else
 			std::cout << COMMAND_IS_INVALID << std::endl;
+		std::cout << SELECT_PROMPT << std::endl;
 	}
 	std::cout << SAY_GOODBYE << std::endl;
 	return (0);

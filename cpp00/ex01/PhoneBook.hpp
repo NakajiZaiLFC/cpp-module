@@ -3,10 +3,12 @@
 
 #include "Contact.hpp"
 #include <iomanip>
+#include <sstream>
 
-#define SAY_HI "Hi! This is My Awesome PhoneBook!\nNotice: You can use \"ADD\",\"SEARCH\",\"EXIT\"\n"
+#define SAY_HI "Hi! This is My Awesome PhoneBook!\n"
+#define SELECT_PROMPT "Notice: You can use \"ADD\",\"SEARCH\",\"EXIT\"\n"
 #define SAY_GOODBYE "Thank you for using My Awesome PhoneBook!\n"
-#define PHONEBOOK_IS_EMPTY "Error: PhoneBook is Empty\n"
+#define PHONEBOOK_IS_EMPTY "Error: PhoneBook is Empty"
 #define COMMAND_IS_INVALID "Error: Command is Invalid\nNotice: You can use \"ADD\",\"SEARCH\",\"EXIT\"\n"
 #define INVALID_INDEX "Error: This index is Invalid\n"
 #define INVALID_INPUT "Error: The input str is Invalid\nPlease try agein!\n"
@@ -28,7 +30,7 @@ public:
 	~PhoneBook();
 	void addContact(const Contact &new_contact);
 	void displayIndexRecord(int m_index);
-	void displaySummaryList(void);
+	bool displaySummaryList(void);
 	Contact m_contacts[8];
 	int m_index;
 	int m_contactCount;
