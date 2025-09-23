@@ -19,6 +19,12 @@ Contact &Contact::operator=(const Contact &other)
 {
 	if (this != &other)
 	{
+		this->m_id = other.m_id;
+		this->m_first_name = other.m_first_name;
+		this->m_last_name = other.m_last_name;
+		this->m_nickname = other.m_nickname;
+		this->m_phone_num = other.m_phone_num;
+		this->m_darkset_secret = other.m_darkset_secret;
 	}
 	return *this;
 }

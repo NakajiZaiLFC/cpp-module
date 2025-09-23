@@ -1,4 +1,4 @@
-NAME := phonebook
+NAME = phonebook
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 FILE =	main.cpp \

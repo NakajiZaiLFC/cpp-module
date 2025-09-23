@@ -5,7 +5,7 @@
 #include <iomanip>
 
 #define SAY_HI "Hi! This is My Awesome PhoneBook!\nNotice: You can use \"ADD\",\"SEARCH\",\"EXIT\"\n"
-#define SAY_GOODBYE "Thank you for using!\n"
+#define SAY_GOODBYE "Thank you for using My Awesome PhoneBook!\n"
 #define PHONEBOOK_IS_EMPTY "Error: PhoneBook is Empty\n"
 #define COMMAND_IS_INVALID "Error: Command is Invalid\nNotice: You can use \"ADD\",\"SEARCH\",\"EXIT\"\n"
 #define INVALID_INDEX "Error: This index is Invalid\n"
@@ -17,6 +17,7 @@
 #define NICKNAME "Nickname: "
 #define PHONE_NUM "Phone Number: "
 #define DARKSET_SECRET "Darkset Secret: "
+#define ADD_DONE "New contact created!"
 
 class PhoneBook
 {
@@ -40,6 +41,7 @@ public:
 	void callSetter(std::string prompt, std::string &tmp_valiable, Contact &new_contact);
 	bool strIsSpace(std::string str);
 	std::string formatForDisplay(const std::string &str);
+
 private:
 	void displayColumn(int i);
 	void displayHeader(void);

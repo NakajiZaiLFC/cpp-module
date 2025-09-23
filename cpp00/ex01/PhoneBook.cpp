@@ -23,9 +23,13 @@ PhoneBook::~PhoneBook()
 {
 }
 
+/**
+ * ADD cmd
+ */
+
 void PhoneBook::handleAddCommand(void)
 {
-	Contact tmp(m_contactCount + 1);
+	Contact tmp(m_contactCount);
 	std::string tmp_first_name;
 	std::string tmp_last_name;
 	std::string tmp_nickname;
@@ -44,99 +48,6 @@ void PhoneBook::handleAddCommand(void)
 		return;
 	std::cout << std::endl;
 	addContact(tmp);
-}
-
-void PhoneBook::addContact(const Contact &new_contact)
-{
-	m_contacts[m_contactCount % 8] = new_contact;
-	m_contactCount++;
-}
-
-void PhoneBook::handleSearchCommand(void)
-{
-	std::string input_index;
-	int search_index;
-
-	displaySummaryList();
-	if (!std::getline(std::cin, input_index))
-		return;
-	search_index = std::stoi(input_index);
-	if (!index_validation(search_index))
-	{
-		std::cout << INVALID_INDEX << std::endl;
-		return;
-	}
-	displayIndexRecord(search_index);
-}
-
-void PhoneBook::displaySummaryList(void)
-{
-	if (m_contactCount < 1)
-	{
-		std::cout << PHONEBOOK_IS_EMPTY << std::endl;
-		return;
-	}
-	else if (m_contactCount < 8)
-	{
-		PhoneBook::displayHeader();
-		for (int i = 0; i < m_contactCount; i++)
-			displayColumn(i);
-	}
-	else
-	{
-		PhoneBook::displayHeader();
-		for (int i = 0; i < 8; i++)
-			displayColumn((m_index + i) % 8);
-	}
-}
-
-void PhoneBook::displayHeader(void)
-{
-	std::cout << std::right << std::setw(10) << "index" << "|";
-	std::cout << std::right << std::setw(10) << "first name" << "|";
-	std::cout << std::right << std::setw(10) << "last name" << "|";
-	std::cout << std::right << std::setw(10) << "nickname" << std::endl;
-}
-
-void PhoneBook::displayColumn(int i)
-{
-	std::cout << std::right << std::setw(10) << m_contacts[i].getId() << "|";
-	std::cout << std::right << std::setw(10) << formatForDisplay(m_contacts[i].getFirstName()) << "|";
-	std::cout << std::right << std::setw(10) << formatForDisplay(m_contacts[i].getLastName()) << "|";
-	std::cout << std::right << std::setw(10) << formatForDisplay(m_contacts[i].getNickname()) << std::endl;
-}
-
-std::string PhoneBook::formatForDisplay(const std::string& str)
-{
-	std::string result;
-	if (str.length() < 10)
-		return (str);
-	result = str.substr(0, 9) + ".";
-	return (result);
-}
-
-bool PhoneBook::index_validation(int search_index)
-{
-	if (m_contactCount < 8)
-	{
-		if (m_contactCount > search_index && search_index > 0)
-			return (true);
-	}
-	else
-	{
-		if (m_contactCount > search_index && search_index > (m_contactCount - 7))
-			return (true);
-	}
-	return (false);
-}
-
-void PhoneBook::displayIndexRecord(int m_index)
-{
-	std::cout << "First Name:" << m_contacts[m_index].getFirstName() << std::endl;
-	std::cout << "Last Name:" << m_contacts[m_index].getLastName() << std::endl;
-	std::cout << "Nickname:" << m_contacts[m_index].getNickname() << std::endl;
-	std::cout << "Phone Number:" << m_contacts[m_index].getPhoneNum() << std::endl;
-	std::cout << "Darkset Secret:" << m_contacts[m_index].getDarksetSecret() << std::endl;
 }
 
 bool PhoneBook::handlePrompt(std::string prompt, std::string &tmp_variable, Contact &tmp_contact)
@@ -204,3 +115,110 @@ void PhoneBook::callSetter(std::string prompt, std::string &tmp_valiable, Contac
 	else
 		new_contact.setDarksetSecret(tmp_valiable);
 }
+
+void PhoneBook::addContact(const Contact &tmp)
+{
+	m_contacts[m_contactCount % 8] = tmp;
+	m_contactCount++;
+}
+
+/**
+ * SEARCH cmd
+ */
+
+void PhoneBook::handleSearchCommand(void)
+{
+	std::string input_index;
+	int search_index;
+
+	try
+	{
+		displaySummaryList();
+		if (!std::getline(std::cin, input_index))
+			return;
+		search_index = std::stoi(input_index);
+		if (!index_validation(search_index))
+		{
+			std::cout << INVALID_INDEX << std::endl;
+			return;
+		}
+		displayIndexRecord(search_index % 8);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+}
+
+void PhoneBook::displaySummaryList(void)
+{
+	if (m_contactCount < 1)
+	{
+		std::cout << PHONEBOOK_IS_EMPTY << std::endl;
+		return;
+	}
+	else if (m_contactCount < 8)
+	{
+		PhoneBook::displayHeader();
+		for (int i = 0; i < m_contactCount; i++)
+			displayColumn(i);
+	}
+	else
+	{
+		PhoneBook::displayHeader();
+		for (int i = 0; i < 8; i++)
+			displayColumn((m_contactCount - 8 + i) % 8);
+	}
+}
+
+void PhoneBook::displayHeader(void)
+{
+	std::cout << std::right << std::setw(10) << "index" << "|";
+	std::cout << std::right << std::setw(10) << "first name" << "|";
+	std::cout << std::right << std::setw(10) << "last name" << "|";
+	std::cout << std::right << std::setw(10) << "nickname" << std::endl;
+}
+
+void PhoneBook::displayColumn(int i)
+{
+	std::cout << std::right << std::setw(10) << m_contacts[i].getId() << "|";
+	std::cout << std::right << std::setw(10) << formatForDisplay(m_contacts[i].getFirstName()) << "|";
+	std::cout << std::right << std::setw(10) << formatForDisplay(m_contacts[i].getLastName()) << "|";
+	std::cout << std::right << std::setw(10) << formatForDisplay(m_contacts[i].getNickname()) << std::endl;
+}
+
+std::string PhoneBook::formatForDisplay(const std::string& str)
+{
+	std::string result;
+	if (str.length() < 10)
+		return (str);
+	result = str.substr(0, 9) + ".";
+	return (result);
+}
+
+bool PhoneBook::index_validation(int search_index)
+{
+	if (m_contactCount < 8)
+	{
+		if (m_contactCount > search_index && search_index >= 0)
+			return (true);
+	}
+	else
+	{
+		if (m_contactCount > search_index && search_index > (m_contactCount - 7))
+			return (true);
+	}
+	return (false);
+}
+
+void PhoneBook::displayIndexRecord(int m_index)
+{
+	std::cout << std::endl;
+	std::cout << std::left << std::setw(20) << FIRST_NAME << m_contacts[m_index].getFirstName() << std::endl;
+	std::cout << std::left << std::setw(20) << LAST_NAME << m_contacts[m_index].getLastName() << std::endl;
+	std::cout << std::left << std::setw(20) << NICKNAME << m_contacts[m_index].getNickname() << std::endl;
+	std::cout << std::left << std::setw(20) << PHONE_NUM << m_contacts[m_index].getPhoneNum() << std::endl;
+	std::cout << std::left << std::setw(20) << DARKSET_SECRET << m_contacts[m_index].getDarksetSecret() << std::endl;
+	std::cout << std::endl;
+}
+

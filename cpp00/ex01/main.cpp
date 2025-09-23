@@ -8,10 +8,7 @@ int main(void)
 	while (std::getline(std::cin, input_cmd))
 	{
 		if (input_cmd == "EXIT")
-		{
-			std::cout << SAY_GOODBYE << std::endl;
 			break;
-		}
 		else if (input_cmd == "ADD")
 			phone_book.handleAddCommand();
 		else if (input_cmd == "SEARCH")
@@ -19,5 +16,6 @@ int main(void)
 		else
 			std::cout << COMMAND_IS_INVALID << std::endl;
 	}
+	std::cout << SAY_GOODBYE << std::endl;
 	return (0);
 }
