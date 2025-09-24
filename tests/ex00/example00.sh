@@ -4,7 +4,11 @@ PROJECT_PATH="../../ex00/"
 
 cd "$PROJECT_PATH"
 
-make
+echo -e "Current commit hash: $(git log --oneline -n 1 | awk '{print $1}')\n"
+
+echo -e "\n-----\nCompiling ...\n"
+make re
+echo -e "\nFinish  ...\n-----\n\n"
 
 func_test() {
   printf "No: [%02d]\n" $1
