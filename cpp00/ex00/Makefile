@@ -1,8 +1,8 @@
 NAME := megaphone
-CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
-FILE = megaphone.cpp
-OBJDIR = obj
+CC := c++
+CFLAGS := -Wall -Werror -Wextra -std:=c++98
+FILE := megaphone.cpp
+OBJDIR := obj
 
 OBJ = $(addprefix $(OBJDIR)/, $(FILE:.cpp=.o))
 
