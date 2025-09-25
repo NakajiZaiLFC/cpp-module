@@ -139,7 +139,6 @@ void PhoneBook::handleSearchCommand(void)
 			return;
 		std::stringstream ss(input_index);
 		ss >> search_index;
-		// search_index = std::stoi(input_index);
 		if (!index_validation(search_index))
 		{
 			std::cout << INVALID_INDEX << std::endl;
