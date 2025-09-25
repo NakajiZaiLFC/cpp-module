@@ -16,23 +16,23 @@ class Contact
 		int getId() const;
 
 		// ===== first name =====
-		void setFirstName(std::string first_name);
+		void setFirstName(const std::string& first_name);
 		std::string getFirstName() const;
 
 		// ===== last name =====
-		void setLastName(std::string last_name);
+		void setLastName(const std::string& last_name);
 		std::string getLastName() const;
 
 		// ===== nickname =====
-		void setNickname(std::string nickname);
+		void setNickname(const std::string& nickname);
 		std::string getNickname() const;
 
 		// ===== phone number =====
-		void setPhoneNum(std::string phone_num);
+		void setPhoneNum(const std::string& phone_num);
 		std::string getPhoneNum() const;
 
 		// ===== darkset secret =====
-		void setDarksetSecret(std::string darkset_secret);
+		void setDarksetSecret(const std::string& darkset_secret);
 		std::string getDarksetSecret() const;
 
 	private:

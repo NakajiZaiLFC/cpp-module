@@ -24,10 +24,6 @@
 class PhoneBook
 {
 public:
-	Contact m_contacts[8];
-	int m_index;
-	int m_contactCount;
-
 	PhoneBook();
 	PhoneBook(const PhoneBook &other);
 	PhoneBook &operator=(const PhoneBook &other);
@@ -36,6 +32,9 @@ public:
 	void handleSearchCommand();
 	void handleAddCommand();
 private:
+	Contact m_contacts[8];
+	int m_index;
+	int m_contactCount;
 	//ADD
 	bool handlePrompt(std::string prompt, std::string &tmp_variable, Contact &tmp_contact);
 	void addContact(const Contact &new_contact);
