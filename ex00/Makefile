@@ -1,10 +1,10 @@
-NAME = megaphone
-CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
-FILE = megaphone.cpp
-OBJDIR = obj
+NAME := megaphone
+CC := c++
+CFLAGS := -Wall -Werror -Wextra -std=c++98
+FILE := megaphone.cpp
+OBJDIR := obj
 
-OBJ = $(addprefix $(OBJDIR)/, $(FILE:.cpp=.o))
+OBJ := $(addprefix $(OBJDIR)/, $(FILE:.cpp=.o))
 
 all: $(NAME)
 
@@ -25,4 +25,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: re clean fclean all
+.PHONY: all re clean fclean
