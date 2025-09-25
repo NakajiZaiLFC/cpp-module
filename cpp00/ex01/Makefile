@@ -1,12 +1,12 @@
-NAME = phonebook
-CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98 -pedantic
-FILE =	main.cpp \
+NAME := phonebook
+CC := c++
+CFLAGS := -Wall -Werror -Wextra -std=c++98 -pedantic
+FILE :=	main.cpp \
 		Contact.cpp \
 		PhoneBook.cpp
-OBJDIR = obj
+OBJDIR := obj
 
-OBJ = $(addprefix $(OBJDIR)/, $(FILE:.cpp=.o))
+OBJ := $(addprefix $(OBJDIR)/, $(FILE:.cpp=.o))
 
 all: $(NAME)
 
