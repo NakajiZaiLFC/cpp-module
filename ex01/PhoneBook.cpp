@@ -226,3 +226,4 @@ void PhoneBook::displayIndexRecord(int m_index)
 	std::cout << std::left << std::setw(20) << DARKSET_SECRET << m_contacts[m_index].getDarksetSecret() << std::endl;
 	std::cout << "==========================================="<< std::endl;
 }
+

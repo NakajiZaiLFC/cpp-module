@@ -51,5 +51,4 @@ private:
 	void displayIndexRecord(int m_index);
 	std::string formatForDisplay(const std::string &str);
 };
-
 #endif
