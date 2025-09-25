@@ -1,0 +1,245 @@
+Hi! This is My Awesome PhoneBook!
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         0|     shota|  nakajima|   nakaji0
+===========================================
+First Name:         shota
+Last Name:          nakajima
+Nickname:           nakaji0
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         0|     shota|  nakajima|   nakaji0
+         1|     shota|  nakajima|   nakaji1
+===========================================
+First Name:         shota
+Last Name:          nakajima
+Nickname:           nakaji1
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         0|     shota|  nakajima|   nakaji0
+         1|     shota|  nakajima|   nakaji1
+         2|     shota|  nakajima|   nakaji2
+===========================================
+First Name:         shota
+Last Name:          nakajima
+Nickname:           nakaji2
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         0|     shota|  nakajima|   nakaji0
+         1|     shota|  nakajima|   nakaji1
+         2|     shota|  nakajima|   nakaji2
+         3|     shota|  nakajima|   nakaji3
+===========================================
+First Name:         shota
+Last Name:          nakajima
+Nickname:           nakaji3
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         0|     shota|  nakajima|   nakaji0
+         1|     shota|  nakajima|   nakaji1
+         2|     shota|  nakajima|   nakaji2
+         3|     shota|  nakajima|   nakaji3
+         4|     shota|  nakajima|   nakaji4
+===========================================
+First Name:         shota
+Last Name:          nakajima
+Nickname:           nakaji4
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         0|     shota|  nakajima|   nakaji0
+         1|     shota|  nakajima|   nakaji1
+         2|     shota|  nakajima|   nakaji2
+         3|     shota|  nakajima|   nakaji3
+         4|     shota|  nakajima|   nakaji4
+         5|     shota|  nakajima|   nakaji5
+===========================================
+First Name:         shota
+Last Name:          nakajima
+Nickname:           nakaji5
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         0|     shota|  nakajima|   nakaji0
+         1|     shota|  nakajima|   nakaji1
+         2|     shota|  nakajima|   nakaji2
+         3|     shota|  nakajima|   nakaji3
+         4|     shota|  nakajima|   nakaji4
+         5|     shota|  nakajima|   nakaji5
+         6|     shota|  nakajima|   nakaji6
+===========================================
+First Name:         shota
+Last Name:          nakajima
+Nickname:           nakaji6
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         0|     shota|  nakajima|   nakaji0
+         1|     shota|  nakajima|   nakaji1
+         2|     shota|  nakajima|   nakaji2
+         3|     shota|  nakajima|   nakaji3
+         4|     shota|  nakajima|   nakaji4
+         5|     shota|  nakajima|   nakaji5
+         6|     shota|  nakajima|   nakaji6
+         7|     shota|  nakajima|nakaji7as.
+===========================================
+First Name:         shota
+Last Name:          nakajima
+Nickname:           nakaji7asdfasdfasdfasdf
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         1|     shota|  nakajima|   nakaji1
+         2|     shota|  nakajima|   nakaji2
+         3|     shota|  nakajima|   nakaji3
+         4|     shota|  nakajima|   nakaji4
+         5|     shota|  nakajima|   nakaji5
+         6|     shota|  nakajima|   nakaji6
+         7|     shota|  nakajima|nakaji7as.
+         8|     shota|  nakajima|nakaji8sa.
+===========================================
+First Name:         shota
+Last Name:          nakajima
+Nickname:           nakaji8sadfasfasdf
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         2|     shota|  nakajima|   nakaji2
+         3|     shota|  nakajima|   nakaji3
+         4|     shota|  nakajima|   nakaji4
+         5|     shota|  nakajima|   nakaji5
+         6|     shota|  nakajima|   nakaji6
+         7|     shota|  nakajima|nakaji7as.
+         8|     shota|  nakajima|nakaji8sa.
+         9|shotaasdf.|nakajimaa.|nakaji9fa.
+===========================================
+First Name:         shotaasdfasdf
+Last Name:          nakajimaasdfasdf
+Nickname:           nakaji9fasdfasfasdfasf
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+First Name: Last Name: Nickname: Phone Number: Darkset Secret: 
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         3|     shota|  nakajima|   nakaji3
+         4|     shota|  nakajima|   nakaji4
+         5|     shota|  nakajima|   nakaji5
+         6|     shota|  nakajima|   nakaji6
+         7|     shota|  nakajima|nakaji7as.
+         8|     shota|  nakajima|nakaji8sa.
+         9|shotaasdf.|nakajimaa.|nakaji9fa.
+        10|shotaasdf.|nakajimaa.|nakaji10a.
+===========================================
+First Name:         shotaasdfasdf
+Last Name:          nakajimaasdfasdf
+Nickname:           nakaji10asdfasdf
+Phone Number:       0800000000
+Darkset Secret:     asdf
+===========================================
+Notice: You can use "ADD","SEARCH","EXIT"
+
+===========================================
+     index|first name| last name|  nickname
+===========================================
+         3|     shota|  nakajima|   nakaji3
+         4|     shota|  nakajima|   nakaji4
+         5|     shota|  nakajima|   nakaji5
+         6|     shota|  nakajima|   nakaji6
+         7|     shota|  nakajima|nakaji7as.
+         8|     shota|  nakajima|nakaji8sa.
+         9|shotaasdf.|nakajimaa.|nakaji9fa.
+        10|shotaasdf.|nakajimaa.|nakaji10a.
+Error: This index is Invalid
+
+Notice: You can use "ADD","SEARCH","EXIT"
+
+Thank you for using My Awesome PhoneBook!
+
