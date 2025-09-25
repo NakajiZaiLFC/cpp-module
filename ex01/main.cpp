@@ -4,6 +4,7 @@ int main(void)
 {
 	PhoneBook phone_book;
 	std::string input_cmd;
+
 	std::cout << SAY_HI << SELECT_PROMPT << std::endl;
 	while (std::getline(std::cin, input_cmd))
 	{

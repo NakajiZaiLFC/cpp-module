@@ -28,25 +28,28 @@ public:
 	PhoneBook(const PhoneBook &other);
 	PhoneBook &operator=(const PhoneBook &other);
 	~PhoneBook();
-	void addContact(const Contact &new_contact);
-	void displayIndexRecord(int m_index);
-	bool displaySummaryList(void);
+
+	void handleSearchCommand();
+	void handleAddCommand();
+private:
 	Contact m_contacts[8];
 	int m_index;
 	int m_contactCount;
-	bool index_validation(int search_index);
-	void handleSearchCommand();
-	void handleAddCommand();
-	bool strValidate(std::string str, std::string prompt);
-	bool phoneNumValidate(std::string str);
+	//ADD
 	bool handlePrompt(std::string prompt, std::string &tmp_variable, Contact &tmp_contact);
-	void callSetter(std::string prompt, std::string &tmp_valiable, Contact &new_contact);
+	void addContact(const Contact &new_contact);
+	bool strValidate(std::string str, std::string prompt);
 	bool strIsSpace(std::string str);
-	std::string formatForDisplay(const std::string &str);
+	bool phoneNumValidate(std::string str);
+	void callSetter(std::string prompt, std::string &tmp_valiable, Contact &new_contact);
 
-private:
+	//SEARCH
+	bool displaySummaryList(void);
 	void displayColumn(int i);
 	void displayHeader(void);
+	bool index_validation(int search_index);
+	void displayIndexRecord(int m_index);
+	std::string formatForDisplay(const std::string &str);
 };
 
 #endif

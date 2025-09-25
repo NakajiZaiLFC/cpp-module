@@ -139,7 +139,6 @@ void PhoneBook::handleSearchCommand(void)
 			return;
 		std::stringstream ss(input_index);
 		ss >> search_index;
-		// search_index = std::stoi(input_index);
 		if (!index_validation(search_index))
 		{
 			std::cout << INVALID_INDEX << std::endl;
@@ -227,4 +226,3 @@ void PhoneBook::displayIndexRecord(int m_index)
 	std::cout << std::left << std::setw(20) << DARKSET_SECRET << m_contacts[m_index].getDarksetSecret() << std::endl;
 	std::cout << "==========================================="<< std::endl;
 }
-
